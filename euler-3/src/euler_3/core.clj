@@ -23,3 +23,6 @@
         (if (evenly-divides? left prime)
           (recur (/ left prime) (primes) (conj found-primes prime))
           (recur left (rest primes-to-test) found-primes))))))
+
+(def answer
+  (apply max (prime-factors 600851475143N)))
